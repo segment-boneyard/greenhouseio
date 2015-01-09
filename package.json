@@ -1,0 +1,16 @@
+{
+  "name": "node-greenhouseio",
+  "version": "0.0.1",
+  "description": "A small node library for interacting with the Greenhouse.io API.",
+  "keywords": [
+    "Greenhouse.io",
+    "API"
+  ],
+  "dependencies": {
+    "debug": "~0.7.4",
+    "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.15.1"
+  }
+}
