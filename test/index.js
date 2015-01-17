@@ -4,6 +4,7 @@ var Greenhouse = require('..');
 var conf = require('./conf');
 
 describe('greenhouse', function () {
+  this.timeout(5000);
 
   it('should create a prospect', function (done) {
     var candidate = {
@@ -21,6 +22,7 @@ describe('greenhouse', function () {
 
     var greenhouse = new Greenhouse(conf.options);
     greenhouse.createCandidate(candidate, function (err, response) {
+      console.log(arguments);
       assert(!err);
       greenhouse.getCandidate(response.id, function (err, response) {
         assert(response.length === 1);

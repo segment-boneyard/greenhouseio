@@ -32,6 +32,7 @@ Greenhouse.prototype.createCandidate = function (candidate, callback) {
   request
     .post(url)
     .set('Content-Type', 'application/json')
+    .set('On-Behalf-Of', this.options.email)
     .auth(this.options.apiKey, '')
     .send(candidate)
     .end(callback);
