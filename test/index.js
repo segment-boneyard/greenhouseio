@@ -10,14 +10,21 @@ describe('greenhouse', function () {
     var candidate = {
       first_name: 'Johnny',
       last_name: 'Appleseed',
-      emails: ['johnny@apples.co'],
+      emails: [
+        {
+          email: 'johnny@apples.co',
+          type: 'personal'
+        }
+      ],
       websites: [
         {
           url: 'https://github.com/appleseed',
           type: 'portfolio'
         }
       ],
-      notes: 'Writes in Go, Javascript and Shell. 132 stars.'
+      notes: 'Writes in Go, Javascript and Shell. 132 stars.',
+      job_id: 47577,
+      external_id: 'appleseed'
     };
 
     var greenhouse = new Greenhouse(conf.options);

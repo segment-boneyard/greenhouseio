@@ -28,6 +28,10 @@ function Greenhouse (options) {
  */
 
 Greenhouse.prototype.createCandidate = function (candidate, callback) {
+  if (!candidate.first_name) throw new Error('first_name is a required field for candidates');
+  if (!candidate.last_name) throw new Error('last_name is a required field for candidates');
+  if (!candidate.external_id) throw new Error('external_id is a required field for candidates');
+  if (!candidate.job_id) throw new Error('job_id is a required field for candidates');
   var url = 'https://api.greenhouse.io/v1/partner/candidates';
   request
     .post(url)
