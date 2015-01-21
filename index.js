@@ -1,5 +1,5 @@
 
-var debug = require('debug')('github:scraper');
+var debug = require('debug')('greenhouse:client');
 var request = require('superagent');
 
 /**
