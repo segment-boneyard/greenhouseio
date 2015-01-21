@@ -29,12 +29,11 @@ describe('greenhouse', function () {
 
     var greenhouse = new Greenhouse(conf.options);
     greenhouse.createCandidate(candidate, function (err, response) {
-      console.log(arguments);
       assert(!err);
-      greenhouse.getCandidate(response.id, function (err, response) {
-        assert(response.length === 1);
-        var cand = response[0];
-        assert(candidate.first_name === cand.first_name + ' ' + cand.last_name);
+      greenhouse.getCandidate(response.body.id, function (err, response) {
+        assert(response.body.length === 1);
+        var cand = response.body[0];
+        assert(cand.name === candidate.first_name + ' ' + candidate.last_name);
         done();
       });
     });

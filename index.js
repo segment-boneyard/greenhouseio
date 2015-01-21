@@ -50,11 +50,11 @@ Greenhouse.prototype.createCandidate = function (candidate, callback) {
  */
 
 Greenhouse.prototype.getCandidate = function (id, callback) {
-  var url = 'https://api.greenhouse.io/v1/partner/candidates';
+  var url = 'https://api.greenhouse.io/v1/partner/candidates?candidate_ids=' + id;
   request
     .get(url)
-    .query('candidate_ids', id)
     .set('Accept', 'application/json')
+    .set('On-Behalf-Of', this.options.email)
     .auth(this.options.apiKey, '')
     .end(callback);
 };

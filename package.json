@@ -1,5 +1,5 @@
 {
-  "name": "node-greenhouseio",
+  "name": "greenhouseio",
   "version": "0.0.1",
   "description": "A small node library for interacting with the Greenhouse.io API.",
   "keywords": [
